@@ -189,7 +189,7 @@ it('acessa a página da política de privacidade removendo o target e então cli
   cy.contains('h1','CAC TAT - Política de Privacidade').should('be.visible')
 })
 
-it.only('testa a página da política de privacidade de forma independente', ()=>{
+it('testa a página da política de privacidade de forma independente', ()=>{
   cy.contains('a','Política de Privacidade').invoke('removeAttr', 'target').click()
 
   cy.title().should('be.equal','Central de Atendimento ao Cliente TAT - Política de Privacidade')

@@ -2,7 +2,8 @@
   "scripts": {
     "cy:open": "cypress open",
     "test": "cypress run",
-    "test:mobile": "cypress run --config viewportWidth=370 viewportHeight=660"
+    "test:mobile": "cypress run --config viewportWidth=370 viewportHeight=660",
+    "test:cloud":"cypress run --record"
   },
   "devDependencies": {
     "cypress": "^13.12.0"
