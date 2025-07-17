@@ -1,7 +1,10 @@
 {
- "scripts": {
-  "cy:open": "cypress open",
-  "test": "cypress run",
-  "test:mobile": "cypress run --config viewportWidth=370 viewportHeight=660"
-}
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "test:mobile": "cypress run --config viewportWidth=370 viewportHeight=660"
+  },
+  "devDependencies": {
+    "cypress": "^13.12.0"
+  }
 }
