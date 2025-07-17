@@ -138,7 +138,6 @@ it('marca cada tipo de atendimento', () =>{
     .check()
     .should('be.checked')
   })
-})
 
 it('marca ambos checkboxes, depois desmarca o último',()=>{
   cy.get('input[type="checkbox"]')
