@@ -1,7 +1,7 @@
 describe('Meu primeiro teste automatizado', () => {
 
 beforeEach(() => {
- cy.visit('cypress-do-zero-a-nuvem/src/index.html')
+ cy.visit('./src/index.html')
 })
 //Modulo 1
 it('Exercicio_1,Visitar a url abaixo', () =>{
