@@ -2,9 +2,26 @@ name: End-to-end tests
 on: push
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest  # Mude para a versão mais recente
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cypress run
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Use uma versão LTS do Node.js
+          
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+            
+      - name: Install dependencies
+        run: npm ci  # Use npm ci para instalação limpa
+        
+      - name: Run Cypress tests
         uses: cypress-io/github-action@v6
