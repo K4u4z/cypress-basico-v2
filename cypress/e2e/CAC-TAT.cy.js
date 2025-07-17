@@ -129,14 +129,12 @@ it('seleciona um produto (Blog) por seu índice',()=>{
 
 it('marca o tipo de atendimento "Feedback"', () =>{
   cy.get('input[type="radio"][value="feedback"]').check()
-  .should('have.value','ajuda')
+  .should('have.value','feedback')
  
 })
 
 it('marca cada tipo de atendimento', () =>{
   cy.get('input[type="radio"')
-  .each(typeofService, ()=>{
-    cy.wrap(typeofService)
     .check()
     .should('be.checked')
   })
